@@ -31,8 +31,8 @@ import com.yc.crm.jyn.dto.UserDto;
 @Transactional
 public class UserServiceTest {
 
-    /** LOGGER */
-    private static final Logger LOGGER = Logger.getLogger(UserServiceTest.class);
+    /** logger */
+    private static final Logger logger = Logger.getLogger(UserServiceTest.class);
 
     /** userService */
     @Autowired
@@ -50,7 +50,7 @@ public class UserServiceTest {
     public void getAll() throws BaseAppException {
 
         List<UserDto> list = userService.selectAllUser();
-        LOGGER.debug(list);
+        logger.debug(list);
     }
     
     /**
@@ -65,7 +65,7 @@ public class UserServiceTest {
     public void getUserById() throws BaseAppException {
         Long id = 1L;
         UserDto user = userService.selectById(id);
-        LOGGER.debug(user);
+        logger.debug(user);
     }
     
     /**
@@ -81,6 +81,6 @@ public class UserServiceTest {
         UserDto qryUser = new UserDto();
         qryUser.setId(1L);
         UserDto user = userService.selectUserByDto(qryUser);
-        LOGGER.debug(user);
+        logger.debug(user);
     }
 }

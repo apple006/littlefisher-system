@@ -18,8 +18,8 @@ import com.yc.core.utils.Room1000Logger;
  */
 public final class PropResourceTest {
     
-    /** LOGGER */
-    private static final Room1000Logger LOGGER = Room1000Logger.getLogger(PropResourceTest.class);
+    /** logger */
+    private static final Room1000Logger logger = Room1000Logger.getLogger(PropResourceTest.class);
     
     /**
      * 
@@ -31,6 +31,6 @@ public final class PropResourceTest {
     @Test
     public void testPropResource() {
         String value = PropResource.getValue("en", "ABC");
-        LOGGER.debug(value);
+        logger.debug(value);
     }
 }
